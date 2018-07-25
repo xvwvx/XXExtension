@@ -34,6 +34,16 @@
 		80B49DFA2108709C003FD71B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0F6192106B10900D94854 /* RxCocoa.framework */; };
 		80B49DFB2108709C003FD71B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0F6172106B10900D94854 /* RxSwift.framework */; };
 		80B49DFD21087215003FD71B /* XXExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B49DFC21087215003FD71B /* XXExtension.framework */; };
+		80B49E08210876C2003FD71B /* UITextInput+XXRange.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B49DB12107FE32003FD71B /* UITextInput+XXRange.swift */; };
+		80B49E09210876C2003FD71B /* XXTextField.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B49DB321084B4F003FD71B /* XXTextField.swift */; };
+		80B49E0A210876C2003FD71B /* XXTextView.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B0F6112105C48C00D94854 /* XXTextView.swift */; };
+		80B49E0B210876C2003FD71B /* XXLabel.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B49DB521084C00003FD71B /* XXLabel.swift */; };
+		80B49E0C210876C2003FD71B /* XXPlaceholderLabel.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B49DB721085C5C003FD71B /* XXPlaceholderLabel.swift */; };
+		80B49E0D210876C2003FD71B /* XXStorageProtocol.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B0F60C2105786600D94854 /* XXStorageProtocol.swift */; };
+		80B49E0E210876C2003FD71B /* XXCheckProtocol.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B0F61D2106B53700D94854 /* XXCheckProtocol.swift */; };
+		80B49E0F210876C2003FD71B /* NSObject+UserInfo.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B0F6032103313100D94854 /* NSObject+UserInfo.swift */; };
+		80B49E10210876C2003FD71B /* UIView+Value.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B0F6092103318600D94854 /* UIView+Value.swift */; };
+		80B49E11210876C2003FD71B /* UIView+XXCollapsibleConstraints.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B0F5F52103250500D94854 /* UIView+XXCollapsibleConstraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +247,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				80B49DD721086F61003FD71B /* XXExtension.h in Headers */,
+				80B49E08210876C2003FD71B /* UITextInput+XXRange.swift in Headers */,
+				80B49E09210876C2003FD71B /* XXTextField.swift in Headers */,
+				80B49E0A210876C2003FD71B /* XXTextView.swift in Headers */,
+				80B49E0B210876C2003FD71B /* XXLabel.swift in Headers */,
+				80B49E0C210876C2003FD71B /* XXPlaceholderLabel.swift in Headers */,
+				80B49E0D210876C2003FD71B /* XXStorageProtocol.swift in Headers */,
+				80B49E0E210876C2003FD71B /* XXCheckProtocol.swift in Headers */,
+				80B49E0F210876C2003FD71B /* NSObject+UserInfo.swift in Headers */,
+				80B49E10210876C2003FD71B /* UIView+Value.swift in Headers */,
+				80B49E11210876C2003FD71B /* UIView+XXCollapsibleConstraints.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

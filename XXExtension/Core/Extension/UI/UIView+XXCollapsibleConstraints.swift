@@ -49,7 +49,7 @@ extension UIView {
         }
     }
     
-    @IBOutlet var xx_collapsibleConstraints: [NSLayoutConstraint] {
+    @IBOutlet public var xx_collapsibleConstraints: [NSLayoutConstraint] {
         get {
             return data.collapsibleConstraints
         }
@@ -59,7 +59,7 @@ extension UIView {
         }
     }
     
-    @IBOutlet weak var xx_collapsedAnimationView: UIView? {
+    @IBOutlet public weak var xx_collapsedAnimationView: UIView? {
         get {
             return data.collapsedAnimationView
         }
@@ -68,7 +68,7 @@ extension UIView {
         }
     }
     
-    @objc var xx_collapsed: Bool {
+    @objc public var xx_collapsed: Bool {
         get {
             return data.collapsed
         }
@@ -77,7 +77,7 @@ extension UIView {
         }
     }
     
-    @objc @IBInspectable var autoCollapse: Bool {
+    @objc @IBInspectable public var autoCollapse: Bool {
         get {
             fatalError("禁止使用该方法")
         }
@@ -86,7 +86,7 @@ extension UIView {
         }
     }
     
-    @objc var xx_autoCollapse: Bool {
+    @objc public var xx_autoCollapse: Bool {
         get {
             return objc_getAssociatedObject(self, &AutoCollapseAssociatedKey) as? Bool ?? false
         }
@@ -96,7 +96,7 @@ extension UIView {
     }
     
     // 当 animationView 为 nil 时 没有动画效果
-    @objc func xx_setCollapsed(_ collapsed: Bool, animationView: UIView?) {
+    @objc public func xx_setCollapsed(_ collapsed: Bool, animationView: UIView?) {
         data.collapsed = collapsed
         if collapsed {
             if self.data.collapsibleConstraints.count != self.data.newCollapsibleConstraints.count {
@@ -145,7 +145,7 @@ extension UIView {
 
 extension UIView {
     @available(*, deprecated, message: "请使用 xx_collapsed")
-    @objc var fd_collapsed: Bool {
+    @objc public var fd_collapsed: Bool {
         get {
             return xx_collapsed
         }
@@ -155,7 +155,7 @@ extension UIView {
     }
     
     @available(*, deprecated, message: "请使用 xx_autoCollapse")
-    @objc var fd_autoCollapse: Bool {
+    @objc public var fd_autoCollapse: Bool {
         get {
             return xx_autoCollapse
         }

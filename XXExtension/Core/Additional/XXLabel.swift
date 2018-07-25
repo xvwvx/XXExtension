@@ -9,7 +9,7 @@
 import UIKit
 import RxCocoa
 
-class XXLabel: UILabel {
+open class XXLabel: UILabel {
     private lazy var placeholderLabel = { () -> UILabel in
         let label = XXPlaceholderLabel()
         label.font = self.font
@@ -30,21 +30,21 @@ class XXLabel: UILabel {
         return label
     }()
     
-    @IBInspectable var placeholder: String?
+    @IBInspectable open var placeholder: String?
     {
         didSet {
             placeholderLabel.text = placeholder
         }
     }
     
-    var attributedPlaceholder:NSAttributedString?
+    open var attributedPlaceholder:NSAttributedString?
     {
         didSet {
             placeholderLabel.attributedText = attributedPlaceholder
         }
     }
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         let _ = self.rx.sentMessage(#selector(setter: text))

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Runtime {
+public class Runtime {
     static func exchangeInstanceMethod(_ cls: Swift.AnyClass?, original: Selector, swizzled: Selector) {
         let originalSelector = class_getInstanceMethod(cls.self, original)!
         let swizzledSelector = class_getInstanceMethod(cls.self, swizzled)!

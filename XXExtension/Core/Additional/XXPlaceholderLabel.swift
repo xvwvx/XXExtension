@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XXPlaceholderLabel: UILabel {
+open class XXPlaceholderLabel: UILabel {
     init() {
         super.init(frame: CGRect.zero)
         
@@ -22,11 +22,11 @@ class XXPlaceholderLabel: UILabel {
         self.textColor = UIColor.gray.withAlphaComponent(0.7)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
     }
 }

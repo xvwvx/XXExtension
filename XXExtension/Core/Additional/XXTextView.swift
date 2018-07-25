@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class XXTextView: UITextView {
+open class XXTextView: UITextView {
     private lazy var placeholderLabel = { () -> UILabel in
         let label = XXPlaceholderLabel()
         label.font = self.font
@@ -38,22 +38,22 @@ class XXTextView: UITextView {
         return label
     }()
     
-    @IBInspectable var placeholder: String?
+    @IBInspectable open var placeholder: String?
         {
         didSet {
             placeholderLabel.text = placeholder
         }
     }
     
-    var attributedPlaceholder:NSAttributedString?
+    open var attributedPlaceholder:NSAttributedString?
     {
         didSet {
             placeholderLabel.attributedText = attributedPlaceholder
         }
     }
     
-    @IBInspectable var maxLength: Int = 0
-    override func awakeFromNib() {
+    @IBInspectable open var maxLength: Int = 0
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         let _ = self.rx.text.orEmpty

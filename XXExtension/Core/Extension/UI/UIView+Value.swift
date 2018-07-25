@@ -22,7 +22,7 @@ extension Namespace where Base: UIView {
 
 //MARK: - UILabel
 public extension Namespace where Base: UILabel {
-    var value: Any? {
+    public var value: Any? {
         get {
             return self.base.text
         }
@@ -39,7 +39,7 @@ public extension Namespace where Base: UILabel {
 
 //MARK: - UITextView
 public extension Namespace where Base: UITextView {
-    var value: Any? {
+    public var value: Any? {
         get {
             return self.base.text
         }
@@ -56,7 +56,7 @@ public extension Namespace where Base: UITextView {
 
 //MARK: - UITextField
 public extension Namespace where Base: UITextField {
-    var value: Any? {
+    public var value: Any? {
         get {
             return self.base.text
         }
@@ -73,7 +73,7 @@ public extension Namespace where Base: UITextField {
 
 //MARK: - UIImageView
 public extension Namespace where Base: UIImageView {
-    var value: Any? {
+    public var value: Any? {
         get {
             return self.base.image
         }

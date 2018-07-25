@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol XXCheckProtocol {
+public protocol XXCheckProtocol {
     var check_emptyMsg: String? {get set}
     var check_regMsg: String? {get set}
     var check_regFunc: (()->Bool)? {get set}
@@ -133,7 +133,7 @@ extension UIView {
 //MARK: - UIView
 extension UIView: XXCheckProtocol {
     
-    @objc @IBInspectable var check_emptyMsg: String? {
+    @objc @IBInspectable public var check_emptyMsg: String? {
         get {
             return data.emptyMsg
         }
@@ -142,7 +142,7 @@ extension UIView: XXCheckProtocol {
         }
     }
     
-    @objc @IBInspectable var check_regMsg: String? {
+    @objc @IBInspectable public var check_regMsg: String? {
         get {
             return data.regMsg
         }
@@ -151,7 +151,7 @@ extension UIView: XXCheckProtocol {
         }
     }
     
-    @objc var check_regFunc: (() -> Bool)? {
+    @objc public var check_regFunc: (() -> Bool)? {
         get {
             return data.regFunc
         }
@@ -169,7 +169,7 @@ extension UIView: XXCheckProtocol {
         }
     }
     
-    @objc func check_isPassed() -> Bool {
+    @objc public func check_isPassed() -> Bool {
         if !data.regFunc!() {
             self.showErrMsg(msg: data.regMsg!)
             return false
@@ -177,7 +177,7 @@ extension UIView: XXCheckProtocol {
         return true
     }
     
-    @objc func check_clear() -> Void {
+    @objc public func check_clear() -> Void {
         data.errLabel?.superview?.isHidden = true
     }
 }
@@ -192,7 +192,7 @@ extension UILabel {
     }
     
     @discardableResult
-    override func check_isPassed() -> Bool {
+    override public func check_isPassed() -> Bool {
         let text = self.attributedText?.string ?? self.text ?? ""
         return check_isPassedText(text: text)
     }
@@ -225,7 +225,7 @@ extension UITextField {
     }
     
     @discardableResult
-    override func check_isPassed() -> Bool {
+    override public func check_isPassed() -> Bool {
         return check_isPassedText(text: self.text!)
     }
     
@@ -254,7 +254,7 @@ extension UITextView {
     }
     
     @discardableResult
-    override func check_isPassed() -> Bool {
+    override public func check_isPassed() -> Bool {
         return check_isPassedText(text: self.text!)
     }
     

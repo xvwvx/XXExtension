@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITextInput {
-    func xx_selectedRange() -> NSRange {
+    public func xx_selectedRange() -> NSRange {
         //开始位置
         let beginning = self.beginningOfDocument
         //光标选择区域
@@ -25,7 +25,7 @@ extension UITextInput {
         return NSRange(location: location, length: length);
     }
     
-    func xx_setSelectedRange(range: NSRange) {
+    public func xx_setSelectedRange(range: NSRange) {
         let beginning = self.beginningOfDocument
         let startPosition = self.position(from: beginning, offset: range.location) ?? UITextPosition()
         let endPosition = self.position(from: beginning, offset: range.location+range.length)

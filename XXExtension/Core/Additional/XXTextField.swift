@@ -10,9 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class XXTextField: UITextField {
-    @IBInspectable var maxLength: Int = 0
-    override func awakeFromNib() {
+open class XXTextField: UITextField {
+    @IBInspectable open var maxLength: Int = 0
+    override open func awakeFromNib() {
         if maxLength > 0 {
             let _ = self.rx.sentMessage(#selector(setter: text))
                 .startWith([self.text!])

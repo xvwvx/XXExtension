@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801A5B4A210950820028012B /* XXExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B49DFC21087215003FD71B /* XXExtension.framework */; };
 		80B0F5E4210324E700D94854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0F5E3210324E700D94854 /* AppDelegate.swift */; };
 		80B0F5E6210324E700D94854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0F5E5210324E700D94854 /* ViewController.swift */; };
 		80B0F5E9210324E700D94854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B0F5E7210324E700D94854 /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		80B0F61B2106B10A00D94854 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0F6182106B10900D94854 /* RxBlocking.framework */; };
 		80B0F61C2106B10A00D94854 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0F6192106B10900D94854 /* RxCocoa.framework */; };
 		80B49DD721086F61003FD71B /* XXExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B49DD521086F61003FD71B /* XXExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		80B49DDA21086F61003FD71B /* XXExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B49DD321086F61003FD71B /* XXExtension.framework */; };
 		80B49DDC21086F61003FD71B /* XXExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80B49DD321086F61003FD71B /* XXExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80B49DEC21087044003FD71B /* UITextInput+XXRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B49DB12107FE32003FD71B /* UITextInput+XXRange.swift */; };
 		80B49DED21087044003FD71B /* XXTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B49DB321084B4F003FD71B /* XXTextField.swift */; };
@@ -33,7 +33,6 @@
 		80B49DF92108709C003FD71B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0F6182106B10900D94854 /* RxBlocking.framework */; };
 		80B49DFA2108709C003FD71B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0F6192106B10900D94854 /* RxCocoa.framework */; };
 		80B49DFB2108709C003FD71B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0F6172106B10900D94854 /* RxSwift.framework */; };
-		80B49DFD21087215003FD71B /* XXExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B49DFC21087215003FD71B /* XXExtension.framework */; };
 		80B49E08210876C2003FD71B /* UITextInput+XXRange.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B49DB12107FE32003FD71B /* UITextInput+XXRange.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		80B49E0A210876C2003FD71B /* XXTextView.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B0F6112105C48C00D94854 /* XXTextView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		80B49E0B210876C2003FD71B /* XXLabel.swift in Headers */ = {isa = PBXBuildFile; fileRef = 80B49DB521084C00003FD71B /* XXLabel.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,10 +106,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80B49DFD21087215003FD71B /* XXExtension.framework in Frameworks */,
+				801A5B4A210950820028012B /* XXExtension.framework in Frameworks */,
 				80B0F61A2106B10A00D94854 /* RxSwift.framework in Frameworks */,
 				80B0F61B2106B10A00D94854 /* RxBlocking.framework in Frameworks */,
-				80B49DDA21086F61003FD71B /* XXExtension.framework in Frameworks */,
 				80B0F61C2106B10A00D94854 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +586,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = s.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -611,6 +610,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = s.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -640,6 +640,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = s.XXExtension;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -673,6 +674,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = s.XXExtension;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

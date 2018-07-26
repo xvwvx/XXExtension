@@ -132,10 +132,12 @@ extension UIView {
         
         if self.xx_autoCollapse && self.xx_collapsibleConstraints.count > 0 {
             let contentSize = self.intrinsicContentSize
-            let noIntrinsicSize = CGSize(width: UIViewNoIntrinsicMetric,
-                                         height: UIViewNoIntrinsicMetric)
-
-            let collapsed = contentSize == noIntrinsicSize || contentSize == CGSize.zero
+//            let noIntrinsicSize = CGSize(width: UIViewNoIntrinsicMetric,
+//                                         height: UIViewNoIntrinsicMetric)
+//
+//            let collapsed contentSize == noIntrinsicSize || contentSize == CGSize.zero
+            
+            let collapsed = contentSize.width <= 0 || contentSize.height <= 0
             self.xx_setCollapsed(collapsed, animationView: nil)
         }
     }
